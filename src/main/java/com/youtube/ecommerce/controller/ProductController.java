@@ -34,21 +34,36 @@ public class ProductController {
         }
 
     }
-
     public Set<ImageModel> uploadImage(MultipartFile[] multipartFiles) throws IOException {
         Set<ImageModel> imageModels = new HashSet<>();
 
-        for (MultipartFile file: multipartFiles) {
+        for (MultipartFile file : multipartFiles) {
             ImageModel imageModel = new ImageModel(
                     file.getOriginalFilename(),
                     file.getContentType(),
                     file.getBytes()
+
             );
             imageModels.add(imageModel);
         }
 
         return imageModels;
     }
+
+//    public Set<ImageModel> uploadImage(MultipartFile[] multipartFiles) throws IOException {
+//        Set<ImageModel> imageModels = new HashSet<>();
+//
+//        for (MultipartFile file: multipartFiles) {
+//            ImageModel imageModel = new ImageModel(
+//                    file.getOriginalFilename(),
+//                    file.getContentType(),
+//                    file.getBytes()
+//            );
+//            imageModels.add(imageModel);
+//        }
+//
+//        return imageModels;
+//    }
 
     @GetMapping({"/getAllProducts"})
     public List<Product> getAllProducts(@RequestParam(defaultValue = "0") int pageNumber,
@@ -64,7 +79,7 @@ public class ProductController {
     }
 
     @PreAuthorize("hasRole('Admin')")
-    @DeleteMapping({"/deleteProductDetails/{productId}"})
+    @DeleteMapping({"/deleteProduct/{productId}"})
     public void deleteProductDetails(@PathVariable("productId") Integer productId) {
         productService.deleteProductDetails(productId);
     }
