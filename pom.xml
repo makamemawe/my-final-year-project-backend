@@ -8,11 +8,11 @@
         <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.youtube</groupId>
-    <artifactId>ecommerce</artifactId>
+    <groupId>com.mawe</groupId>
+    <artifactId>kizimbani</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>e-commerce-youtube</name>
-    <description>API's for E-Commerce application</description>
+    <name>kizimbani-webapp</name>
+    <description>final year project</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -27,6 +27,18 @@
             <groupId>com.razorpay</groupId>
             <artifactId>razorpay-java</artifactId>
             <version>1.4.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.18.1</version> <!-- Use the latest version available -->
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itext7-core</artifactId>
+            <version>7.1.16</version>
         </dependency>
 
         <dependency>
@@ -60,6 +72,21 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.12.1</version>
         </dependency>
     </dependencies>
 
